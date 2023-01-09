@@ -39,7 +39,13 @@ const Navbar = () => {
           onClick={() => navigate("/")}
           sx={{ "&:hover": { cursor: "pointer" } }}
           color={Shades.secondary[500]}
+          display="flex"
+          alignItems="center"
         >
+          <img
+            style={{ height: "20px", marginBottom: "2px" }}
+            src="https://clipground.com/images/web-developer-logo-png-2.jpg"
+          />
           Devs Store
         </Box>
         <Box
@@ -54,9 +60,27 @@ const Navbar = () => {
           <IconButton sx={{ color: "black" }}>
             <PersonOutline />
           </IconButton>
-          <IconButton sx={{ color: "black" }}>
-            <ShoppingBagOutlined />
-          </IconButton>
+          <Badge
+            badgeContent={cart.length}
+            color="secondary"
+            invisible={cart.length === 0}
+            sx={{
+              "& .MuiBadge-badge": {
+                right: 5,
+                top: 5,
+                padding: "0 4px",
+                height: "14px",
+                minWidth: "13px",
+              },
+            }}
+          >
+            <IconButton
+              onClick={() => setIsCartOpen({})}
+              sx={{ color: "black" }}
+            >
+              <ShoppingBagOutlined />
+            </IconButton>
+          </Badge>
           <IconButton sx={{ color: "black" }}>
             <MenuOutlined />
           </IconButton>
