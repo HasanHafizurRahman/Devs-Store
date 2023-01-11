@@ -7,8 +7,7 @@ import { shades } from "../theme";
 import { addToCart } from "../state";
 import { useNavigate } from "react-router-dom";
 
-const Item = () => {
-    const Item = ({ item, width }) => {
+const Item = ({ item, width }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [count, setCount] = useState(1);
@@ -22,12 +21,14 @@ const Item = () => {
     data: {
       attributes: {
         formats: {
-          medium: { url },
+          thumbnail: { url },
         },
       },
     },
   } = image;
-  return (<Box width={width}>
+
+  return (
+    <Box width={width}>
       <Box
         position="relative"
         onMouseOver={() => setIsHovered(true)}
@@ -35,8 +36,8 @@ const Item = () => {
       >
         <img
           alt={item.name}
-          width="300px"
-          height="400px"
+          width="150px"
+          height="200px"
           src={`http://localhost:1337${url}`}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: "pointer" }}
@@ -46,10 +47,10 @@ const Item = () => {
           position="absolute"
           bottom="10%"
           left="0"
-          width="100%"
+          width="40%"
           padding="0 5%"
         >
-          <Box display="flex" justifyContent="space-between">
+          <Box display="flex" flexDirection="column">
             <Box
               display="flex"
               alignItems="center"
@@ -85,7 +86,8 @@ const Item = () => {
         <Typography>{name}</Typography>
         <Typography fontWeight="bold">${price}</Typography>
       </Box>
-    </Box>);
+    </Box>
+  );
 };
 
 export default Item;

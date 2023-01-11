@@ -30,7 +30,7 @@ const MainCarousel = () => {
             position: "absolute",
             top: "50%",
             left: "0",
-            color: "white",
+            color: "gray",
             padding: "5px",
             zIndex: "10",
           }}
@@ -45,7 +45,7 @@ const MainCarousel = () => {
             position: "absolute",
             top: "50%",
             right: "0",
-            color: "white",
+            color: "gray",
             padding: "5px",
             zIndex: "10",
           }}
