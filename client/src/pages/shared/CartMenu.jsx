@@ -11,7 +11,7 @@ import {
   removeFromCart,
   setIsCartOpen,
 } from "../../state";
-import {Shades} from "../../theme"
+import { shades } from "../../theme";
 
 const FlexBox = styled(Box)`
   display: flex;
@@ -66,7 +66,7 @@ const CartMenu = () => {
                       alt={item?.name}
                       width="123px"
                       height="164px"
-                      src={`http://localhost:2000${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                      src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                     />
                   </Box>
                   <Box flex="1 1 60%">
@@ -87,7 +87,7 @@ const CartMenu = () => {
                       <Box
                         display="flex"
                         alignItems="center"
-                        border={`1.5px solid ${Shades.neutral[500]}`}
+                        border={`1.5px solid ${shades.neutral[500]}`}
                       >
                         <IconButton
                           onClick={() =>
@@ -124,7 +124,7 @@ const CartMenu = () => {
             </FlexBox>
             <Button
               sx={{
-                backgroundColor: Shades.primary[400],
+                backgroundColor: shades.primary[400],
                 color: "white",
                 borderRadius: 0,
                 minWidth: "100%",

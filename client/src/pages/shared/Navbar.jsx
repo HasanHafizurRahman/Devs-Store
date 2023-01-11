@@ -7,14 +7,14 @@ import {
   SearchOutlined,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import { Shades } from "../../theme";
-// import { shades } from "../../theme";
+import { shades } from "../../theme";
 import { setIsCartOpen } from "../../state";
 
-const Navbar = () => {
+function Navbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
+
   return (
     <Box
       display="flex"
@@ -38,8 +38,9 @@ const Navbar = () => {
         <Box
           onClick={() => navigate("/")}
           sx={{ "&:hover": { cursor: "pointer" } }}
-          color={Shades.secondary[500]}
+          color={shades.secondary[500]}
           display="flex"
+          gap="5px"
           alignItems="center"
         >
           <img
@@ -75,7 +76,7 @@ const Navbar = () => {
             }}
           >
             <IconButton
-              onClick={() => setIsCartOpen({})}
+              onClick={() => dispatch(setIsCartOpen({}))}
               sx={{ color: "black" }}
             >
               <ShoppingBagOutlined />
@@ -88,6 +89,14 @@ const Navbar = () => {
       </Box>
     </Box>
   );
-};
+}
 
 export default Navbar;
+
+{
+  /* <img
+            style={{ height: "20px", marginBottom: "2px" }}
+            src="https://clipground.com/images/web-developer-logo-png-2.jpg"
+          />
+          Devs Store */
+}

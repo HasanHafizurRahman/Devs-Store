@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
-export const Shades = {
+export const shades = {
   primary: {
     100: "#cccccc",
     200: "#999999",
@@ -12,7 +12,6 @@ export const Shades = {
     800: "#000000",
     900: "#000000",
   },
-
   secondary: {
     100: "#f7ccd2",
     200: "#ef99a4",
@@ -24,7 +23,6 @@ export const Shades = {
     800: "#56000b",
     900: "#2b0006",
   },
-
   neutral: {
     100: "#f5f5f5",
     200: "#ecebeb",
@@ -41,34 +39,34 @@ export const Shades = {
 export const theme = createTheme({
   palette: {
     primary: {
-      main: Shades.primary[500],
+      main: shades.primary[500],
     },
     secondary: {
-      main: Shades.secondary[500],
+      main: shades.secondary[500],
     },
     neutral: {
-      dark: Shades.neutral[700],
-      main: Shades.neutral[500],
-      light: Shades.neutral[100],
+      dark: shades.neutral[700],
+      main: shades.neutral[500],
+      light: shades.neutral[100],
     },
   },
   typography: {
-    fontFamily: ["Fauna One", "Sans-serif"].join(","),
+    fontFamily: ["Fauna One", "sans-serif"].join(","),
     fontSize: 11,
     h1: {
-      fontFamily: ["Cinzel", "Sans-serif"].join(","),
+      fontFamily: ["Cinzel", "sans-serif"].join(","),
       fontSize: 48,
     },
     h2: {
-      fontFamily: ["Fauna One", "Sans-serif"].join(","),
+      fontFamily: ["Cinzel", "sans-serif"].join(","),
       fontSize: 36,
     },
     h3: {
-      fontFamily: ["Fauna One", "Sans-serif"].join(","),
+      fontFamily: ["Cinzel", "sans-serif"].join(","),
       fontSize: 20,
     },
     h4: {
-      fontFamily: ["Fauna One", "Sans-serif"].join(","),
+      fontFamily: ["Cinzel", "sans-serif"].join(","),
       fontSize: 14,
     },
   },
