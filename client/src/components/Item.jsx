@@ -47,7 +47,7 @@ const Item = ({ item, width }) => {
           position="absolute"
           bottom="10%"
           left="0"
-          width="40%"
+          width="60%"
           padding="0 5%"
         >
           <Box display="flex" flexDirection="column">
@@ -84,7 +84,7 @@ const Item = ({ item, width }) => {
             .replace(/^./, (str) => str.toUpperCase())}
         </Typography>
         <Typography>{name}</Typography>
-        <Typography fontWeight="bold">${price}</Typography>
+        <Typography fontWeight="bold">৳{price}</Typography>
       </Box>
     </Box>
   );
